@@ -8,8 +8,12 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "node --loader ts-node/esm prisma/seed.ts"
+  },
   "dependencies": {
     "@prisma/client": "^5.17.0",
+    "fsw-barber": "file:",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
@@ -20,9 +24,9 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8",
     "prisma": "^5.17.0",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
