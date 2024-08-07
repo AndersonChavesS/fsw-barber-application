@@ -1,9 +1,8 @@
+import { Button } from './_components/ui/button'
 
+const Home = () => {
+  return <Button>Teste</Button>
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
 }
 
-export default page
+export default Home
