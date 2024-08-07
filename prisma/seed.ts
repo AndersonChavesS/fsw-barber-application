@@ -1,4 +1,5 @@
-const { PrismaClient } = require('@prisma/client');
+
+const { PrismaClient} = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
@@ -119,7 +120,7 @@ async function seedDatabase() {
       });
 
       for (const service of services) {
-        await prisma.barbersShopService.create({
+        await prisma.barbershopService.create({
           data: {
             name: service.name,
             description: service.description,
