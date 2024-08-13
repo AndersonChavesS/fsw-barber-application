@@ -10,13 +10,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-interface BarbershopaPageProps {
+interface BarbershopPageProps {
   params: {
     id: string
   }
 }
 
-const BarbershopPage = async ({ params }: BarbershopaPageProps) => {
+const BarbershopPage = async ({ params }: BarbershopPageProps) => {
   const barbershop = await db.barbershop.findUnique({
     where: {
       id: params.id,
@@ -90,8 +90,8 @@ const BarbershopPage = async ({ params }: BarbershopaPageProps) => {
           {barbershop.services.map((service) => (
             <ServiceItem
               key={service.id}
-              barbershop={barbershop}
-              service={service}
+              barbershop={JSON.parse(JSON.stringify(barbershop))}
+              service={JSON.parse(JSON.stringify(service))}
             />
           ))}
         </div>
